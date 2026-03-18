@@ -32,38 +32,39 @@
 
   <div class="page-shell">
     <main id="top">
-      <section class="hero">
+      <section class="hero reveal-section" id="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Business Technology Management Graduate</p>
-          <h1>Balong Supnet</h1>
-          <p class="hero-headline">Business Technology Management Graduate | Data &amp; Systems Analysis</p>
-          <p class="hero-tagline">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <p class="eyebrow hero-sequence" style="--hero-delay: 0s;">Business Technology Management Graduate</p>
+          <h1 class="hero-sequence hero-sequence-strong" style="--hero-delay: 0.1s;">Balong Supnet</h1>
+          <p class="hero-headline hero-sequence" style="--hero-delay: 0.2s;">Business Technology Management Graduate | Data &amp; Systems Analysis</p>
+          <p class="hero-tagline hero-sequence" style="--hero-delay: 0.3s;">
             Bridging data, systems, and business decisions through analytical thinking and structured
             problem-solving.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions hero-sequence" style="--hero-delay: 0.42s;">
             <a class="button button-primary" href="#projects">View Projects</a>
             <a class="button button-secondary" href="#contact">Contact</a>
           </div>
         </div>
 
         <aside class="hero-panel" aria-label="Professional profile highlights">
-          <div class="panel-card">
+          <div class="panel-card hero-panel-card" style="--panel-delay: 0.36s;">
             <span class="panel-label">Career Direction</span>
             <strong>Data, IT, and business analysis roles</strong>
           </div>
-          <div class="panel-card">
+          <div class="panel-card hero-panel-card" style="--panel-delay: 0.46s;">
             <span class="panel-label">Strength Areas</span>
             <strong>Analytics, systems thinking, stakeholder insight</strong>
           </div>
-          <div class="panel-card">
+          <div class="panel-card hero-panel-card" style="--panel-delay: 0.56s;">
             <span class="panel-label">Approach</span>
             <strong>Structured, practical, and business-focused problem solving</strong>
           </div>
         </aside>
       </section>
 
-      <section class="content-section" id="about">
+      <section class="content-section reveal-section" id="about">
         <div class="section-heading">
           <p class="section-label">About</p>
           <h2>Analytical foundation with business and systems perspective</h2>
@@ -81,7 +82,7 @@
         </div>
       </section>
 
-      <section class="content-section" id="projects">
+      <section class="content-section reveal-section" id="projects">
         <div class="section-heading">
           <p class="section-label">Projects</p>
           <h2>Selected work focused on analysis, reporting, and decision support</h2>
@@ -136,17 +137,19 @@
                 </div>
               </div>
             </div>
-            <button class="project-toggle" type="button" aria-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-credit-risk">
               View Details
             </button>
-            <div class="project-details" hidden>
-              <p>
-                This project focused on preparing and analyzing credit data, selecting classification
-                techniques, and evaluating model performance using common metrics such as accuracy,
-                precision, recall, and confusion matrices. Beyond the technical model output, the work
-                emphasized how data patterns can inform business decisions around risk segmentation and
-                responsible lending.
-              </p>
+            <div class="project-details" id="project-details-credit-risk" hidden>
+              <div class="project-details-inner">
+                <p>
+                  This project focused on preparing and analyzing credit data, selecting classification
+                  techniques, and evaluating model performance using common metrics such as accuracy,
+                  precision, recall, and confusion matrices. Beyond the technical model output, the work
+                  emphasized how data patterns can inform business decisions around risk segmentation and
+                  responsible lending.
+                </p>
+              </div>
             </div>
           </article>
 
@@ -176,16 +179,18 @@
                 </div>
               </div>
             </div>
-            <button class="project-toggle" type="button" aria-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-ymca">
               View Details
             </button>
-            <div class="project-details" hidden>
-              <p>
-                The capstone centered on organizing evaluation data into a usable structure, designing a
-                clean dashboard interface, and presenting KPIs in a way that supported non-technical
-                stakeholders. The result was a practical reporting tool that connected data collection,
-                backend storage, and front-end visibility into one streamlined workflow.
-              </p>
+            <div class="project-details" id="project-details-ymca" hidden>
+              <div class="project-details-inner">
+                <p>
+                  The capstone centered on organizing evaluation data into a usable structure, designing a
+                  clean dashboard interface, and presenting KPIs in a way that supported non-technical
+                  stakeholders. The result was a practical reporting tool that connected data collection,
+                  backend storage, and front-end visibility into one streamlined workflow.
+                </p>
+              </div>
             </div>
           </article>
 
@@ -215,22 +220,24 @@
                 </div>
               </div>
             </div>
-            <button class="project-toggle" type="button" aria-expanded="false">
+            <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-reporting">
               View Details
             </button>
-            <div class="project-details" hidden>
-              <p>
-                This portfolio section highlights a working style centered on data organization, metric
-                interpretation, and concise communication. The emphasis is not only on technical tools,
-                but also on producing outputs that are useful for business users reviewing performance,
-                identifying issues, and prioritizing follow-up actions.
-              </p>
+            <div class="project-details" id="project-details-reporting" hidden>
+              <div class="project-details-inner">
+                <p>
+                  This portfolio section highlights a working style centered on data organization, metric
+                  interpretation, and concise communication. The emphasis is not only on technical tools,
+                  but also on producing outputs that are useful for business users reviewing performance,
+                  identifying issues, and prioritizing follow-up actions.
+                </p>
+              </div>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="content-section" id="skills">
+      <section class="content-section reveal-section" id="skills">
         <div class="section-heading">
           <p class="section-label">Skills</p>
           <h2>Core capabilities across analytics, systems, and business communication</h2>
@@ -266,7 +273,7 @@
         </div>
       </section>
 
-      <section class="content-section" id="experience">
+      <section class="content-section reveal-section" id="experience">
         <div class="section-heading">
           <p class="section-label">Experience</p>
           <h2>Operational environments that strengthened systems awareness and decision support skills</h2>
@@ -299,7 +306,7 @@
         </div>
       </section>
 
-      <section class="content-section contact-section" id="contact">
+      <section class="content-section contact-section reveal-section" id="contact">
         <div class="section-heading">
           <p class="section-label">Contact</p>
           <h2>Let&apos;s connect</h2>
