@@ -10,6 +10,7 @@
   >
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Balong Supnet">
+  <meta name="theme-color" content="#2f6fed">
   <link rel="canonical" href="https://balongsupnet.ca/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://balongsupnet.ca/">
@@ -18,7 +19,10 @@
     property="og:description"
     content="Portfolio website for Balong Supnet featuring projects, skills, experience, and contact information."
   >
-  <meta property="og:image" content="https://balongsupnet.ca/assets/headshot.jpg">
+  <meta property="og:image" content="https://balongsupnet.ca/assets/headshot-optimized.jpg">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:site_name" content="Balong Supnet">
   <meta property="og:image:alt" content="Portrait of Balong Supnet">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Balong Supnet | Business Technology Management Graduate Portfolio">
@@ -26,7 +30,7 @@
     name="twitter:description"
     content="Portfolio website for Balong Supnet featuring projects, skills, experience, and contact information."
   >
-  <meta name="twitter:image" content="https://balongsupnet.ca/assets/headshot.jpg">
+  <meta name="twitter:image" content="https://balongsupnet.ca/assets/headshot-optimized.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -34,6 +38,7 @@
     rel="stylesheet"
   >
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
     {
@@ -41,13 +46,22 @@
       "@type": "Person",
       "name": "Balong Supnet",
       "url": "https://balongsupnet.ca/",
-      "image": "https://balongsupnet.ca/assets/headshot.jpg",
+      "image": "https://balongsupnet.ca/assets/headshot-optimized.jpg",
       "jobTitle": "Business Technology Management Graduate",
       "description": "Business Technology Management graduate focused on data analysis, systems analysis, business analysis, and dashboard projects.",
       "email": "mailto:me@balongsupnet.ca",
       "sameAs": [
         "https://www.linkedin.com/in/balong-supnet/"
       ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Balong Supnet",
+      "url": "https://balongsupnet.ca/",
+      "description": "Portfolio website for Balong Supnet featuring projects, skills, experience, and contact information."
     }
   </script>
 </head>
@@ -72,7 +86,7 @@
           <div class="hero-portrait-shell">
               <img
                 class="hero-portrait"
-                src="assets/headshot.jpg"
+                src="assets/headshot-optimized.jpg"
                 alt="Portrait of Balong Supnet"
                 width="900"
                 height="1200"
@@ -434,4 +448,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
 
