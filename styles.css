@@ -68,10 +68,10 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 1.15rem;
   width: min(calc(100% - 2rem), var(--max-width));
   margin: 0 auto;
-  padding: 0.95rem 0;
+  padding: 0.95rem 0.65rem 0.95rem 1.1rem;
 }
 
 .brand-mark {
@@ -151,7 +151,7 @@ textarea {
 
 .hero-copy {
   position: relative;
-  max-width: 40rem;
+  max-width: 42rem;
 }
 
 .hero-glow {
@@ -195,9 +195,9 @@ textarea {
 .hero {
   min-height: calc(100vh - 5rem);
   display: grid;
-  grid-template-columns: minmax(180px, 232px) minmax(0, 1fr) minmax(220px, 0.62fr);
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) minmax(220px, 0.58fr);
   align-items: center;
-  gap: 1.45rem;
+  gap: 2.25rem;
   margin-top: 0;
   padding: 3.25rem 0 2.6rem;
   padding-bottom: 2rem;
@@ -364,7 +364,7 @@ body.page-ready .hero-panel-card {
 
 .hero-panel {
   display: grid;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
 .hero-portrait-card {
@@ -374,6 +374,8 @@ body.page-ready .hero-panel-card {
   justify-self: start;
   border-radius: 22px;
   box-shadow: 0 18px 40px rgba(31, 41, 55, 0.12);
+  width: min(100%, 272px);
+  margin-left: 0.35rem;
 }
 
 .hero-portrait-shell {
@@ -382,7 +384,7 @@ body.page-ready .hero-panel-card {
   overflow: hidden;
   border-radius: inherit;
   background: linear-gradient(180deg, rgba(234, 241, 255, 0.92) 0%, rgba(255, 255, 255, 0.98) 100%);
-  aspect-ratio: 1 / 1.16;
+  aspect-ratio: 1 / 1.12;
 }
 
 .hero-portrait {
@@ -390,7 +392,7 @@ body.page-ready .hero-panel-card {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center 9%;
 }
 
 .panel-card,
@@ -928,7 +930,8 @@ body.page-ready .hero-panel-card {
   }
 
   .hero-portrait-card {
-    max-width: 14.5rem;
+    max-width: 16rem;
+    margin-left: 0;
   }
 
   .hero-copy {
@@ -962,7 +965,7 @@ body.page-ready .hero-panel-card {
     min-height: auto;
     margin-top: 0;
     padding: 2.35rem 0 2rem;
-    gap: 1.15rem;
+    gap: 1.4rem;
   }
 
   .hero-panel {
@@ -970,9 +973,10 @@ body.page-ready .hero-panel-card {
   }
 
   .hero-portrait-card {
-    width: min(14rem, 100%);
+    width: min(16rem, 100%);
     max-width: none;
     justify-self: center;
+    margin-left: 0;
   }
 
   .hero-portrait {
