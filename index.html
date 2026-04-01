@@ -49,15 +49,26 @@
         </div>
 
         <aside class="hero-panel" aria-label="Professional profile highlights">
-          <div class="panel-card hero-panel-card" style="--panel-delay: 0.36s;">
+          <div class="hero-portrait-card hero-panel-card" style="--panel-delay: 0.3s;">
+            <div class="hero-portrait-shell">
+              <img
+                class="hero-portrait"
+                src="assets/headshot.jpg"
+                alt="Portrait of Balong Supnet"
+                width="900"
+                height="1200"
+              >
+            </div>
+          </div>
+          <div class="panel-card hero-panel-card" style="--panel-delay: 0.4s;">
             <span class="panel-label">Career Direction</span>
             <strong>Data, IT, and business analysis roles</strong>
           </div>
-          <div class="panel-card hero-panel-card" style="--panel-delay: 0.46s;">
+          <div class="panel-card hero-panel-card" style="--panel-delay: 0.5s;">
             <span class="panel-label">Strength Areas</span>
             <strong>Analytics, systems thinking, stakeholder insight</strong>
           </div>
-          <div class="panel-card hero-panel-card" style="--panel-delay: 0.56s;">
+          <div class="panel-card hero-panel-card" style="--panel-delay: 0.6s;">
             <span class="panel-label">Approach</span>
             <strong>Structured, practical, and business-focused problem solving</strong>
           </div>
@@ -136,9 +147,21 @@
                   <p>Translated model performance into practical risk insights that support better lending decisions and evaluation quality.</p>
                 </div>
               </div>
+              <div class="process-visual" aria-label="Placeholder space for project process visuals">
+                <div class="process-visual-frame">
+                  <span class="process-visual-badge">Process Visual Placeholder</span>
+                  <strong>Credit Risk Workflow Snapshot</strong>
+                  <p>Add a screenshot of your dataset prep, model comparison, or evaluation dashboard here.</p>
+                </div>
+                <div class="process-visual-steps" aria-hidden="true">
+                  <span>Data Prep</span>
+                  <span>Model Testing</span>
+                  <span>Risk Review</span>
+                </div>
+              </div>
             </div>
             <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-credit-risk">
-              View Details
+              View More Information
             </button>
             <div class="project-details" id="project-details-credit-risk" hidden>
               <div class="project-details-inner">
@@ -178,9 +201,21 @@
                   <p>Improved access to KPI reporting and surfaced clearer program insights for stakeholder review and evaluation.</p>
                 </div>
               </div>
+              <div class="process-visual" aria-label="Placeholder space for project process visuals">
+                <div class="process-visual-frame">
+                  <span class="process-visual-badge">Process Visual Placeholder</span>
+                  <strong>Dashboard Journey Preview</strong>
+                  <p>Add a screenshot of the dashboard layout, KPI cards, or reporting flow for visitors to scan quickly.</p>
+                </div>
+                <div class="process-visual-steps" aria-hidden="true">
+                  <span>Data Intake</span>
+                  <span>KPI Dashboard</span>
+                  <span>Stakeholder Review</span>
+                </div>
+              </div>
             </div>
             <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-ymca">
-              View Details
+              View More Information
             </button>
             <div class="project-details" id="project-details-ymca" hidden>
               <div class="project-details-inner">
@@ -219,9 +254,21 @@
                   <p>Supported stronger visibility into performance trends, exceptions, and follow-up priorities for operational review.</p>
                 </div>
               </div>
+              <div class="process-visual" aria-label="Placeholder space for project process visuals">
+                <div class="process-visual-frame">
+                  <span class="process-visual-badge">Process Visual Placeholder</span>
+                  <strong>Reporting Process Example</strong>
+                  <p>Add a report mockup, SQL output, or cleaned spreadsheet view that shows how raw data becomes usable insight.</p>
+                </div>
+                <div class="process-visual-steps" aria-hidden="true">
+                  <span>Raw Inputs</span>
+                  <span>Structured Analysis</span>
+                  <span>Insight Output</span>
+                </div>
+              </div>
             </div>
             <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-reporting">
-              View Details
+              View More Information
             </button>
             <div class="project-details" id="project-details-reporting" hidden>
               <div class="project-details-inner">
@@ -314,7 +361,7 @@
         <div class="contact-grid">
           <div class="contact-card">
             <p class="contact-label">Email</p>
-            <a href="mailto:supnetbalong@outlook.com">supnetbalong@outlook.com</a>
+            <a href="mailto:me@balongsupnet.ca">me@balongsupnet.ca</a>
           </div>
           <div class="contact-card">
             <p class="contact-label">LinkedIn</p>
@@ -335,8 +382,11 @@
               Message
               <textarea name="message" rows="5" placeholder="How can I help?" required></textarea>
             </label>
-            <button class="button button-primary" type="submit">Send Message</button>
-            <p class="form-note" id="form-note">The form opens your email app with the message pre-filled.</p>
+            <div class="contact-actions">
+              <button class="button button-primary" type="submit">Send Message</button>
+              <a class="button button-secondary" href="mailto:me@balongsupnet.ca">Email Directly</a>
+            </div>
+            <p class="form-note" id="form-note">The form opens your email app with a pre-filled message to me@balongsupnet.ca.</p>
           </form>
         </div>
       </section>

@@ -1,6 +1,6 @@
 const contactForm = document.getElementById("contact-form");
 const formNote = document.getElementById("form-note");
-const destinationEmail = "supnetbalong@outlook.com";
+const destinationEmail = "me@balongsupnet.ca";
 const projectToggles = document.querySelectorAll(".project-toggle");
 const revealSections = document.querySelectorAll(".reveal-section:not(#hero)");
 const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
@@ -41,57 +41,48 @@ function animateProjectDetails(details, expand) {
     return;
   }
 
-  const finishAnimation = () => {
-    details.style.height = expand ? "auto" : "";
-    details.style.overflow = "";
-    details.style.transition = "";
-
-    if (!expand) {
-      details.hidden = true;
-      details.classList.remove("is-open");
-    }
-  };
-
-  details.hidden = false;
-  const startHeight = expand ? 0 : details.scrollHeight;
-
   if (expand) {
-    details.classList.add("is-open");
-  } else {
-    details.classList.remove("is-open");
+    details.hidden = false;
+    window.requestAnimationFrame(() => {
+      details.classList.add("is-open");
+    });
+    return;
   }
 
-  const endHeight = expand ? details.scrollHeight : 0;
-
-  details.style.overflow = "hidden";
-  details.style.height = `${startHeight}px`;
-  details.style.transition = "height 0.45s cubic-bezier(0.22, 1, 0.36, 1)";
-
-  window.requestAnimationFrame(() => {
-    details.style.height = `${endHeight}px`;
-  });
-
   const handleTransitionEnd = (event) => {
-    if (event.propertyName !== "height") {
+    if (event.propertyName !== "grid-template-rows") {
       return;
     }
 
+    details.hidden = true;
     details.removeEventListener("transitionend", handleTransitionEnd);
-    finishAnimation();
   };
 
   details.addEventListener("transitionend", handleTransitionEnd);
+  details.classList.remove("is-open");
+}
+
+function updateToggleLabel(toggle, expanded) {
+  toggle.textContent = expanded ? "Hide More Information" : "View More Information";
 }
 
 projectToggles.forEach((toggle) => {
+  const details = document.getElementById(toggle.getAttribute("aria-controls"));
+  const expanded = toggle.getAttribute("aria-expanded") === "true";
+
+  if (details) {
+    details.hidden = !expanded;
+    details.classList.toggle("is-open", expanded);
+  }
+  updateToggleLabel(toggle, expanded);
   toggle.addEventListener("click", () => {
-    const details = toggle.nextElementSibling;
+    const controlledDetails = document.getElementById(toggle.getAttribute("aria-controls"));
     const expanded = toggle.getAttribute("aria-expanded") === "true";
     const nextExpanded = !expanded;
 
     toggle.setAttribute("aria-expanded", String(nextExpanded));
-    toggle.textContent = nextExpanded ? "Hide Details" : "View Details";
-    animateProjectDetails(details, nextExpanded);
+    updateToggleLabel(toggle, nextExpanded);
+    animateProjectDetails(controlledDetails, nextExpanded);
   });
 });
 
@@ -110,12 +101,12 @@ if (contactForm) {
     );
 
     window.location.href = `mailto:${destinationEmail}?subject=${subject}&body=${body}`;
-    formNote.textContent = "Your email app should now open with the message pre-filled.";
+    formNote.textContent = "Your email app should now open with the message pre-filled to me@balongsupnet.ca.";
   });
 }
 
 if (!prefersReducedMotion.matches && "IntersectionObserver" in window) {
-  // Reveal content sections as they enter the viewport for a lighter scroll experience.
+  // Reveal sections a little early so quick scrolling does not leave content lagging behind.
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -128,13 +119,13 @@ if (!prefersReducedMotion.matches && "IntersectionObserver" in window) {
       });
     },
     {
-      threshold: 0.18,
-      rootMargin: "0px 0px -10% 0px",
+      threshold: 0.01,
+      rootMargin: "0px 0px 18% 0px",
     }
   );
 
-  revealSections.forEach((section, index) => {
-    section.style.setProperty("--section-delay", `${Math.min(index * 0.04, 0.12)}s`);
+  revealSections.forEach((section) => {
+    section.style.setProperty("--section-delay", "0s");
     revealObserver.observe(section);
   });
 } else {
