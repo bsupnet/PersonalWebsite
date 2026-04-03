@@ -252,41 +252,31 @@
                   <p>Translated model performance into practical risk insights that support better lending decisions and evaluation quality.</p>
                 </div>
               </div>
-              <div class="process-visual" aria-label="Placeholder space for project process visuals">
+              <div class="process-visual" aria-label="Credit risk project preview">
                 <div class="process-visual-frame process-visual-frame-media">
                   <span class="process-visual-badge">Project Visuals</span>
-                  <img
-                    class="project-visual-main"
-                    src="assets/credit-risk-thumbnail.png"
-                    alt="Credit risk model results table used as the main project thumbnail"
-                    loading="lazy"
+                  <button
+                    class="project-image-button project-image-button-main"
+                    type="button"
+                    data-modal-image="assets/credit-risk-thumbnail.png"
+                    data-modal-alt="Credit risk model results table used as the main project thumbnail"
+                    data-modal-title="Model Comparison Snapshot"
+                    data-modal-preview="Performance summary across the evaluated credit risk models."
+                    data-modal-description="This results snapshot compares logistic regression, gradient boosting, and random forest using accuracy, precision, recall, F1 score, and ROC score. It quickly shows why logistic regression was selected as the strongest overall model for the evaluation dataset."
+                    aria-label="Open larger view of the credit risk model results table"
                   >
-                </div>
-                <div class="project-visual-gallery" aria-label="Scrollable credit risk project charts">
-                  <img
-                    class="project-visual-thumb"
-                    src="assets/credit-risk-confusion-matrix.png"
-                    alt="Confusion matrix for the best-performing credit risk model"
-                    loading="lazy"
-                  >
-                  <img
-                    class="project-visual-thumb"
-                    src="assets/credit-risk-feature-importance.png"
-                    alt="Feature importance chart showing top drivers of credit risk"
-                    loading="lazy"
-                  >
-                  <img
-                    class="project-visual-thumb"
-                    src="assets/credit-risk-roc-curve.png"
-                    alt="ROC curve comparison across evaluated credit risk models"
-                    loading="lazy"
-                  >
-                  <img
-                    class="project-visual-thumb"
-                    src="assets/credit-risk-sample-predictions.png"
-                    alt="Sample predictions table from the credit risk evaluation dataset"
-                    loading="lazy"
-                  >
+                    <img
+                      class="project-visual-main"
+                      src="assets/credit-risk-thumbnail.png"
+                      alt="Credit risk model results table used as the main project thumbnail"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Performance summary across the evaluated credit risk models.
+                      </span>
+                    </span>
+                  </button>
                 </div>
                 <div class="process-visual-steps" aria-hidden="true">
                   <span>Data Prep</span>
@@ -307,6 +297,96 @@
                   emphasized how data patterns can inform business decisions around risk segmentation and
                   responsible lending.
                 </p>
+                <div class="project-visual-gallery" aria-label="Scrollable credit risk project charts">
+                  <button
+                    class="project-image-button"
+                    type="button"
+                    data-modal-image="assets/credit-risk-confusion-matrix.png"
+                    data-modal-alt="Confusion matrix for the best-performing credit risk model"
+                    data-modal-title="Confusion Matrix"
+                    data-modal-preview="Best-model classification outcomes across low-risk and high-risk borrowers."
+                    data-modal-description="This confusion matrix shows how the selected model performed on the evaluation dataset. It highlights where predictions were correct, where misclassifications occurred, and how well the model separated higher-risk applicants from lower-risk ones."
+                    aria-label="Open larger view of the confusion matrix"
+                  >
+                    <img
+                      class="project-visual-thumb"
+                      src="assets/credit-risk-confusion-matrix.png"
+                      alt="Confusion matrix for the best-performing credit risk model"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Best-model classification outcomes across low-risk and high-risk borrowers.
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="project-image-button"
+                    type="button"
+                    data-modal-image="assets/credit-risk-feature-importance.png"
+                    data-modal-alt="Feature importance chart showing top drivers of credit risk"
+                    data-modal-title="Top Risk Drivers"
+                    data-modal-preview="Feature importance ranking for the variables with the strongest influence."
+                    data-modal-description="This chart highlights the variables that most influenced model predictions, including credit score, income, revolving utilization, and financial buffer measures. It supports a more interpretable view of what contributed most to higher predicted credit risk."
+                    aria-label="Open larger view of the feature importance chart"
+                  >
+                    <img
+                      class="project-visual-thumb"
+                      src="assets/credit-risk-feature-importance.png"
+                      alt="Feature importance chart showing top drivers of credit risk"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Feature importance ranking for the variables with the strongest influence.
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="project-image-button"
+                    type="button"
+                    data-modal-image="assets/credit-risk-roc-curve.png"
+                    data-modal-alt="ROC curve comparison across evaluated credit risk models"
+                    data-modal-title="ROC Curve Comparison"
+                    data-modal-preview="Model discrimination performance across logistic regression, random forest, and gradient boosting."
+                    data-modal-description="This ROC curve compares how well each model distinguished high-risk applicants from low-risk applicants across multiple thresholds. It was one of the main evaluation visuals used to compare candidate models and support final model selection."
+                    aria-label="Open larger view of the ROC curve chart"
+                  >
+                    <img
+                      class="project-visual-thumb"
+                      src="assets/credit-risk-roc-curve.png"
+                      alt="ROC curve comparison across evaluated credit risk models"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Model discrimination performance across the tested classifiers.
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="project-image-button"
+                    type="button"
+                    data-modal-image="assets/credit-risk-sample-predictions.png"
+                    data-modal-alt="Sample predictions table from the credit risk evaluation dataset"
+                    data-modal-title="Sample Predictions Table"
+                    data-modal-preview="Example borrower records with predicted probabilities and final classifications."
+                    data-modal-description="This sample prediction table shows how the selected model translated borrower attributes into predicted probabilities and class labels. It makes the output easier to interpret for business users who want to connect model results back to real applicant profiles."
+                    aria-label="Open larger view of the sample predictions table"
+                  >
+                    <img
+                      class="project-visual-thumb"
+                      src="assets/credit-risk-sample-predictions.png"
+                      alt="Sample predictions table from the credit risk evaluation dataset"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Example borrower records with predicted probabilities and final classifications.
+                      </span>
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
@@ -421,6 +501,23 @@
         </div>
       </section>
     </main>
+  </div>
+
+  <div class="image-modal" id="image-modal" hidden aria-hidden="true">
+    <div class="image-modal-backdrop" data-modal-close></div>
+    <div class="image-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="image-modal-title">
+      <button class="image-modal-close" id="image-modal-close" type="button" aria-label="Close image viewer">
+        ×
+      </button>
+      <div class="image-modal-media-shell">
+        <img class="image-modal-media" id="image-modal-media" alt="">
+      </div>
+      <div class="image-modal-copy">
+        <p class="image-modal-kicker">Project Visual</p>
+        <h3 id="image-modal-title"></h3>
+        <p id="image-modal-description"></p>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>

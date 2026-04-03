@@ -2,9 +2,16 @@ const contactForm = document.getElementById("contact-form");
 const formNote = document.getElementById("form-note");
 const destinationEmail = "me@balongsupnet.ca";
 const projectToggles = document.querySelectorAll(".project-toggle");
+const projectImageButtons = document.querySelectorAll(".project-image-button");
 const revealSections = document.querySelectorAll(".reveal-section:not(#hero)");
 const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const imageModal = document.getElementById("image-modal");
+const imageModalMedia = document.getElementById("image-modal-media");
+const imageModalTitle = document.getElementById("image-modal-title");
+const imageModalDescription = document.getElementById("image-modal-description");
+const imageModalClose = document.getElementById("image-modal-close");
+let lastImageTrigger = null;
 
 function markPageReady() {
   if (prefersReducedMotion.matches) {
@@ -66,6 +73,66 @@ function updateToggleLabel(toggle, expanded) {
   toggle.textContent = expanded ? "Hide More Information" : "View More Information";
 }
 
+function openImageModal(trigger) {
+  if (!imageModal || !imageModalMedia || !imageModalTitle || !imageModalDescription) {
+    return;
+  }
+
+  lastImageTrigger = trigger;
+  imageModalMedia.src = trigger.dataset.modalImage || "";
+  imageModalMedia.alt = trigger.dataset.modalAlt || "";
+  imageModalTitle.textContent = trigger.dataset.modalTitle || "Project Visual";
+  imageModalDescription.textContent = trigger.dataset.modalDescription || "";
+  imageModal.hidden = false;
+  imageModal.setAttribute("aria-hidden", "false");
+
+  if (prefersReducedMotion.matches) {
+    imageModal.classList.add("is-open");
+  } else {
+    window.requestAnimationFrame(() => {
+      imageModal.classList.add("is-open");
+    });
+  }
+
+  document.body.classList.add("modal-open");
+  imageModalClose?.focus();
+}
+
+function closeImageModal() {
+  if (!imageModal) {
+    return;
+  }
+
+  const finishClose = () => {
+    imageModal.hidden = true;
+    imageModal.setAttribute("aria-hidden", "true");
+    imageModalMedia.removeAttribute("src");
+    if (lastImageTrigger) {
+      lastImageTrigger.focus();
+    }
+  };
+
+  document.body.classList.remove("modal-open");
+
+  if (prefersReducedMotion.matches) {
+    imageModal.classList.remove("is-open");
+    finishClose();
+    return;
+  }
+
+  const handleTransitionEnd = (event) => {
+    if (event.target !== imageModal.querySelector(".image-modal-dialog") || event.propertyName !== "transform") {
+      return;
+    }
+
+    imageModal.removeEventListener("transitionend", handleTransitionEnd, true);
+    finishClose();
+  };
+
+  imageModal.addEventListener("transitionend", handleTransitionEnd, true);
+  imageModal.classList.remove("is-open");
+}
+
 projectToggles.forEach((toggle) => {
   const details = document.getElementById(toggle.getAttribute("aria-controls"));
   const expanded = toggle.getAttribute("aria-expanded") === "true";
@@ -84,6 +151,21 @@ projectToggles.forEach((toggle) => {
     updateToggleLabel(toggle, nextExpanded);
     animateProjectDetails(controlledDetails, nextExpanded);
   });
+});
+
+projectImageButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    openImageModal(button);
+  });
+});
+
+imageModalClose?.addEventListener("click", closeImageModal);
+
+imageModal?.addEventListener("click", (event) => {
+  const target = event.target;
+  if (target instanceof HTMLElement && target.hasAttribute("data-modal-close")) {
+    closeImageModal();
+  }
 });
 
 if (contactForm) {
@@ -161,6 +243,12 @@ if ("IntersectionObserver" in window) {
 prefersReducedMotion.addEventListener("change", () => {
   if (prefersReducedMotion.matches) {
     revealSections.forEach((section) => section.classList.add("is-visible"));
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && imageModal && !imageModal.hidden) {
+    closeImageModal();
   }
 });
 
