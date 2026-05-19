@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 1240" role="img" aria-labelledby="title desc">
+  <title id="title">Invoice PDF Analyzer component trend view</title>
+  <desc id="desc">Dark dashboard component trend section showing provolone unit price, quantity purchased, and a supporting invoice line item table.</desc>
+  <rect width="2048" height="1240" fill="#101217"/>
+  <g font-family="Arial, sans-serif">
+    <text x="30" y="36" fill="#f6f7fb" font-size="28" font-weight="800">Trend Component</text>
+    <rect x="30" y="58" width="1990" height="76" rx="14" fill="#292a33"/>
+    <text x="58" y="106" fill="#f6f7fb" font-size="30">Provolone</text>
+    <text x="30" y="194" fill="#aeb0b7" font-size="28" font-weight="700">Component trend for </text>
+    <rect x="273" y="170" width="122" height="30" rx="5" fill="#1b2224"/><text x="282" y="193" fill="#41b46c" font-size="21" font-family="Consolas, monospace">Provolone</text>
+    <text x="403" y="194" fill="#aeb0b7" font-size="28" font-weight="700"> within </text>
+    <rect x="481" y="170" width="100" height="30" rx="5" fill="#1b2224"/><text x="490" y="193" fill="#41b46c" font-size="21" font-family="Consolas, monospace">Chicken</text>
+    <text x="585" y="194" fill="#aeb0b7" font-size="28" font-weight="700">.</text>
+    <g stroke="#30333c" stroke-width="2">
+      <line x1="176" y1="306" x2="794" y2="306"/><line x1="176" y1="383" x2="794" y2="383"/>
+      <line x1="176" y1="460" x2="794" y2="460"/><line x1="176" y1="537" x2="794" y2="537"/>
+      <line x1="176" y1="614" x2="794" y2="614"/>
+      <line x1="1170" y1="280" x2="1986" y2="280"/><line x1="1170" y1="369" x2="1986" y2="369"/>
+      <line x1="1170" y1="458" x2="1986" y2="458"/><line x1="1170" y1="547" x2="1986" y2="547"/>
+      <line x1="1170" y1="636" x2="1986" y2="636"/><line x1="1170" y1="723" x2="1986" y2="723"/>
+    </g>
+    <g fill="#d9dbe2" font-size="23" font-weight="700">
+      <text x="118" y="313">14.2</text><text x="136" y="390">14</text><text x="118" y="467">13.8</text>
+      <text x="118" y="544">13.6</text><text x="118" y="621">13.2</text>
+      <text x="172" y="764">Jan 2026</text><text x="342" y="764">Feb 2026</text><text x="578" y="764">Apr 2026</text><text x="710" y="764">May 2026</text>
+      <text x="1128" y="289">25</text><text x="1128" y="378">20</text><text x="1128" y="467">15</text>
+      <text x="1128" y="556">10</text><text x="1142" y="645">5</text><text x="1142" y="732">0</text>
+      <text x="1208" y="764">Jan 2026</text><text x="1374" y="764">Feb 2026</text><text x="1608" y="764">Apr 2026</text><text x="1837" y="764">May 2026</text>
+    </g>
+    <text x="78" y="545" transform="rotate(-90 78 545)" fill="#d9dbe2" font-size="27" font-weight="800">Price</text>
+    <text x="448" y="812" fill="#d9dbe2" font-size="28" font-weight="800">Period</text>
+    <text x="1092" y="548" transform="rotate(-90 1092 548)" fill="#d9dbe2" font-size="27" font-weight="800">Quantity Purchased</text>
+    <text x="1542" y="812" fill="#d9dbe2" font-size="28" font-weight="800">Period</text>
+    <path d="M213 693 L354 596 L620 402 L754 306" fill="none" stroke="#1f77b4" stroke-width="6"/>
+    <g fill="#1f77b4"><circle cx="213" cy="693" r="6"/><circle cx="354" cy="596" r="6"/><circle cx="620" cy="402" r="6"/><circle cx="754" cy="306" r="6"/></g>
+    <rect x="1187" y="405" width="130" height="318" fill="#ff7f0e" stroke="#f6f7fb" stroke-width="2"/>
+    <rect x="1355" y="369" width="130" height="354" fill="#ff7f0e" stroke="#f6f7fb" stroke-width="2"/>
+    <rect x="1676" y="334" width="130" height="389" fill="#ff7f0e" stroke="#f6f7fb" stroke-width="2"/>
+    <rect x="1838" y="298" width="130" height="425" fill="#ff7f0e" stroke="#f6f7fb" stroke-width="2"/>
+    <g>
+      <rect x="30" y="882" width="1992" height="337" rx="14" fill="#101217" stroke="#30333c" stroke-width="2"/>
+      <rect x="30" y="882" width="1992" height="70" fill="#1b1f28"/>
+      <g stroke="#30333c" stroke-width="2">
+        <line x1="286" y1="882" x2="286" y2="1219"/><line x1="539" y1="882" x2="539" y2="1219"/>
+        <line x1="773" y1="882" x2="773" y2="1219"/><line x1="919" y1="882" x2="919" y2="1219"/>
+        <line x1="1176" y1="882" x2="1176" y2="1219"/><line x1="1316" y1="882" x2="1316" y2="1219"/>
+        <line x1="1600" y1="882" x2="1600" y2="1219"/><line x1="1876" y1="882" x2="1876" y2="1219"/>
+        <line x1="30" y1="952" x2="2022" y2="952"/><line x1="30" y1="1018" x2="2022" y2="1018"/>
+        <line x1="30" y1="1086" x2="2022" y2="1086"/><line x1="30" y1="1152" x2="2022" y2="1152"/>
+      </g>
+      <g fill="#aeb0b7" font-size="25" font-weight="800">
+        <text x="48" y="928">period</text><text x="302" y="928">invoice_date</text><text x="554" y="928">item_name</text>
+        <text x="788" y="928">unit_price</text><text x="932" y="928">quantity_purchased</text><text x="1190" y="928">line_total</text>
+        <text x="1330" y="928">normalized_unit_price</text><text x="1615" y="928">normalized_cost_unit</text><text x="1890" y="928">raw_unit</text>
+      </g>
+      <g fill="#f6f7fb" font-size="26">
+        <text x="48" y="995">2026-01-01 00:00:00</text><text x="302" y="995">2026-01-08 00:00:00</text><text x="554" y="995">Provolone Cheese</text><text x="788" y="995">$13.20</text><text x="1135" y="995" text-anchor="end">18</text><text x="1190" y="995">$237.60</text><text x="1330" y="995">$0.01</text><text x="1615" y="995">g</text><text x="1890" y="995">kg</text>
+        <text x="48" y="1062">2026-02-01 00:00:00</text><text x="302" y="1062">2026-02-14 00:00:00</text><text x="554" y="1062">Provolone Cheese</text><text x="788" y="1062">$13.45</text><text x="1135" y="1062" text-anchor="end">20</text><text x="1190" y="1062">$269.00</text><text x="1330" y="1062">$0.01</text><text x="1615" y="1062">g</text><text x="1890" y="1062">kg</text>
+        <text x="48" y="1128">2026-04-01 00:00:00</text><text x="302" y="1128">2026-04-17 00:00:00</text><text x="554" y="1128">Provolone Cheese</text><text x="788" y="1128">$13.95</text><text x="1135" y="1128" text-anchor="end">22</text><text x="1190" y="1128">$306.90</text><text x="1330" y="1128">$0.01</text><text x="1615" y="1128">g</text><text x="1890" y="1128">kg</text>
+        <text x="48" y="1195">2026-05-01 00:00:00</text><text x="302" y="1195">2026-05-29 00:00:00</text><text x="554" y="1195">Provolone Cheese</text><text x="788" y="1195">$14.20</text><text x="1135" y="1195" text-anchor="end">24</text><text x="1190" y="1195">$340.80</text><text x="1330" y="1195">$0.01</text><text x="1615" y="1195">g</text><text x="1890" y="1195">kg</text>
+      </g>
+    </g>
+  </g>
+</svg>

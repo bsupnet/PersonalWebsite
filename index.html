@@ -159,7 +159,7 @@
           </p>
           <div class="projects-highlights" aria-label="Project section highlights">
             <div class="highlight-pill">
-              <span class="highlight-value">2</span>
+              <span class="highlight-value">3</span>
               <span class="highlight-label">Core portfolio projects</span>
             </div>
             <div class="highlight-pill">
@@ -199,11 +199,31 @@
                   <p>Improved access to KPI reporting and surfaced clearer program insights for stakeholder review and evaluation.</p>
                 </div>
               </div>
-              <div class="process-visual" aria-label="Placeholder space for project process visuals">
-                <div class="process-visual-frame">
-                  <span class="process-visual-badge">Process Visual Placeholder</span>
-                  <strong>Dashboard Journey Preview</strong>
-                  <p>Add a screenshot of the dashboard layout, KPI cards, or reporting flow for visitors to scan quickly.</p>
+              <div class="process-visual" aria-label="YMCA Evaluation Dashboard preview">
+                <div class="process-visual-frame process-visual-frame-media">
+                  <span class="process-visual-badge">Dashboard Visuals</span>
+                  <button
+                    class="project-image-button project-image-button-main"
+                    type="button"
+                    data-modal-image="assets/ymca-staff-rating-trends.svg"
+                    data-modal-alt="YMCA dashboard line chart showing average rating trends by month and staff member"
+                    data-modal-title="Staff Rating Trends"
+                    data-modal-preview="Average rating trends by month across staff members."
+                    data-modal-description="This dashboard view compares average evaluation ratings from January through March across six staff members. The upward month-over-month trend helps stakeholders quickly spot performance movement and compare staff-level outcomes."
+                    aria-label="Open larger view of the YMCA staff rating trends chart"
+                  >
+                    <img
+                      class="project-visual-main"
+                      src="assets/ymca-staff-rating-trends.svg"
+                      alt="YMCA dashboard line chart showing average rating trends by month and staff member"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Average rating trends by month across staff members.
+                      </span>
+                    </span>
+                  </button>
                 </div>
                 <div class="process-visual-steps" aria-hidden="true">
                   <span>Data Intake</span>
@@ -223,6 +243,172 @@
                   stakeholders. The result was a practical reporting tool that connected data collection,
                   backend storage, and front-end visibility into one streamlined workflow.
                 </p>
+                <div class="project-visual-gallery" aria-label="Scrollable YMCA dashboard charts">
+                  <button
+                    class="project-image-button"
+                    type="button"
+                    data-modal-image="assets/ymca-moment-category-counts.svg"
+                    data-modal-alt="YMCA dashboard area chart showing moment category counts by month"
+                    data-modal-title="Moment Category Counts"
+                    data-modal-preview="Monthly category counts for First, Invitation, Milestone, and Surprise and Delight moments."
+                    data-modal-description="This view breaks down evaluation records by month and moment category. The February peak makes it easier to identify where engagement volume was highest and which moment types contributed most to total activity."
+                    aria-label="Open larger view of the YMCA moment category counts chart"
+                  >
+                    <img
+                      class="project-visual-thumb"
+                      src="assets/ymca-moment-category-counts.svg"
+                      alt="YMCA dashboard area chart showing moment category counts by month"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Monthly category counts across moment types.
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="project-image-button"
+                    type="button"
+                    data-modal-image="assets/ymca-daily-rating.svg"
+                    data-modal-alt="YMCA dashboard line chart showing average rating by day"
+                    data-modal-title="Daily Rating Movement"
+                    data-modal-preview="Day-by-day average rating movement across the evaluation period."
+                    data-modal-description="This daily trend chart shows how average ratings shifted across the month. It highlights a mid-month rating peak and a late-month dip that stakeholders could investigate alongside staffing, program activity, or data collection timing."
+                    aria-label="Open larger view of the YMCA daily rating chart"
+                  >
+                    <img
+                      class="project-visual-thumb"
+                      src="assets/ymca-daily-rating.svg"
+                      alt="YMCA dashboard line chart showing average rating by day"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Day-by-day average rating movement.
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-overview">
+              <div>
+                <p class="project-kicker">Project</p>
+                <h3>Invoice PDF Analyzer</h3>
+              </div>
+              <p class="project-summary">
+                Built a local analytics prototype that converts supplier invoice PDFs and images into
+                sandwich ingredient cost, gross margin, and price trend insights.
+              </p>
+              <div class="project-tags" aria-label="Tools used in Invoice PDF Analyzer">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>OCR</span>
+                <span>Plotly</span>
+              </div>
+              <div class="meta-grid">
+                <div class="project-meta-card">
+                  <span class="meta-label">Key Tools</span>
+                  <p>Streamlit, pandas, pdfplumber, OpenCV, Tesseract OCR, Plotly</p>
+                </div>
+                <div class="project-meta-card impact-card">
+                  <span class="meta-label">Business Impact</span>
+                  <p>Turned supplier invoice files into margin visibility so restaurant operators could review cost changes by sandwich and component.</p>
+                </div>
+              </div>
+              <div class="process-visual" aria-label="Invoice PDF Analyzer preview">
+                <div class="process-visual-frame process-visual-frame-media">
+                  <span class="process-visual-badge">App Visuals</span>
+                  <button
+                    class="project-image-button project-image-button-main"
+                    type="button"
+                    data-modal-image="assets/invoice-pdf-analyzer-summary.svg"
+                    data-modal-alt="Invoice PDF Analyzer upload area and KPI summary dashboard"
+                    data-modal-title="Invoice Upload and KPI Summary"
+                    data-modal-preview="Uploaded supplier invoices flow into sandwich cost and margin KPI cards."
+                    data-modal-description="This view shows the app's main workflow: invoice PDFs and image files are uploaded, controls select the sandwich and time frame, and KPI cards summarize current ingredient cost, selling price, gross profit, gross margin, cost change, and margin change."
+                    aria-label="Open larger view of the Invoice PDF Analyzer KPI summary"
+                  >
+                    <img
+                      class="project-visual-main"
+                      src="assets/invoice-pdf-analyzer-summary.svg"
+                      alt="Invoice PDF Analyzer upload area and KPI summary dashboard"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Uploaded supplier invoices flow into sandwich cost and margin KPI cards.
+                      </span>
+                    </span>
+                  </button>
+                </div>
+                <div class="process-visual-steps" aria-hidden="true">
+                  <span>Invoice Upload</span>
+                  <span>Line Item Parsing</span>
+                  <span>Margin Analysis</span>
+                </div>
+              </div>
+            </div>
+            <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-details-invoice-pdf-analyzer">
+              View More Information
+            </button>
+            <div class="project-details" id="project-details-invoice-pdf-analyzer" hidden>
+              <div class="project-details-inner">
+                <p>
+                  The app uses text extraction for PDFs and local OCR for image invoices, then applies deterministic
+                  parsing, item classification, ingredient alias mapping, and unit conversion logic. Matched invoice
+                  rows are rolled into sandwich recipes so users can compare ingredient cost, selling price, gross
+                  profit, gross margin, and component-level changes over time.
+                </p>
+                <div class="project-visual-gallery" aria-label="Scrollable Invoice PDF Analyzer screenshots">
+                  <button
+                    class="project-image-button"
+                    type="button"
+                    data-modal-image="assets/invoice-pdf-analyzer-trends.svg"
+                    data-modal-alt="Invoice PDF Analyzer sandwich cost trend chart"
+                    data-modal-title="Sandwich Cost Trend"
+                    data-modal-preview="Estimated sandwich cost is compared against the fixed sale price."
+                    data-modal-description="This trend view tracks estimated sandwich cost across invoice periods and compares it with the fixed sale price. It helps show whether ingredient movement is compressing or improving gross margin over time."
+                    aria-label="Open larger view of the Invoice PDF Analyzer sandwich cost trend"
+                  >
+                    <img
+                      class="project-visual-thumb"
+                      src="assets/invoice-pdf-analyzer-trends.svg"
+                      alt="Invoice PDF Analyzer sandwich cost trend chart"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Estimated sandwich cost is compared against the fixed sale price.
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="project-image-button"
+                    type="button"
+                    data-modal-image="assets/invoice-pdf-analyzer-component-trend.svg"
+                    data-modal-alt="Invoice PDF Analyzer component trend charts and invoice line item table"
+                    data-modal-title="Component Trend Detail"
+                    data-modal-preview="Ingredient-level price and purchase quantity changes are shown with supporting invoice rows."
+                    data-modal-description="This component view lets users inspect one ingredient inside a selected sandwich. It combines unit price movement, quantity purchased, and the parsed invoice line items behind the trend, making the analysis more traceable."
+                    aria-label="Open larger view of the Invoice PDF Analyzer component trend"
+                  >
+                    <img
+                      class="project-visual-thumb"
+                      src="assets/invoice-pdf-analyzer-component-trend.svg"
+                      alt="Invoice PDF Analyzer component trend charts and invoice line item table"
+                      loading="lazy"
+                    >
+                    <span class="project-image-overlay" aria-hidden="true">
+                      <span class="project-image-overlay-copy">
+                        Ingredient-level trends are shown with supporting invoice rows.
+                      </span>
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
