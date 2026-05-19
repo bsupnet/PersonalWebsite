@@ -293,11 +293,32 @@ body.page-ready .hero-panel-card {
   line-height: 1.8;
 }
 
+.hero-fit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+.hero-fit-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(47, 111, 237, 0.16);
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(31, 41, 55, 0.06);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .button {
